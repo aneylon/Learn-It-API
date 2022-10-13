@@ -16,6 +16,8 @@ mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error"));
 
+const userRoute = require("./routes/userRoute");
+app.use("/user", userRoute);
 const subjectRoute = require("./routes/subjectRoute");
 app.use("/subject", subjectRoute);
 const lessonRoute = require("./routes/lessonRoute");
