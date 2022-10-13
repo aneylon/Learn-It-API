@@ -22,6 +22,10 @@ const subjectRoute = require("./routes/subjectRoute");
 app.use("/subject", subjectRoute);
 const lessonRoute = require("./routes/lessonRoute");
 app.use("/lesson", lessonRoute);
+const cardRoute = require("./routes/cardRoute");
+app.use("/card", cardRoute);
+const cardSetRoute = require("./routes/cardSetRoute");
+app.use("/cardSet", cardSetRoute);
 
 app.get("/", (req, res) => {
   res.send("Hey Learn It!");
