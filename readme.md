@@ -9,7 +9,7 @@ Api for Learn It application
 - Add .env file with the following values
 
 ```
-PORT = 4242
+PORT = 3737
 MORGAN_LOGGING = "dev"
 MONGO_DATABASE = "mongodb://127.0.0.1/learn-it"
 SECRET = "donttellnobody"
