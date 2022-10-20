@@ -11,6 +11,10 @@ const lessonSchema = new Schema(
       type: String,
       required: true,
     },
+    subjectId: {
+      type: Number,
+      required: true,
+    },
   },
   { timestamps: true }
 );
