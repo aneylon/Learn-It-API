@@ -12,7 +12,7 @@ const lessonSchema = new Schema(
       required: true,
     },
     subjectId: {
-      type: Number,
+      type: String,
       required: true,
     },
   },
