@@ -2,6 +2,7 @@ const express = require("express");
 
 const {
   getLessons,
+  getLessonsBySubject,
   getLesson,
   postLesson,
   deleteLesson,
@@ -13,6 +14,8 @@ const router = express.Router();
 router.get("/", getLessons);
 
 router.get("/:id", getLesson);
+
+router.get("/subject/:subjectId", getLessonsBySubject);
 
 router.post("/", postLesson);
 

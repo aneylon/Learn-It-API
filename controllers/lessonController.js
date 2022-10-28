@@ -6,6 +6,14 @@ const getLessons = async (req, res) => {
   res.status(200).json({ lessons });
 };
 
+const getLessonsBySubject = async (req, res) => {
+  const { subjectId } = req.params;
+  const lessons = await Lesson.find({ subjectId: subjectId }).sort({
+    createdAt: -1,
+  });
+  res.status(200).json({ lessons });
+};
+
 const getLesson = async (req, res) => {
   const { id } = req.params;
   if (!mongoose.Types.ObjectId.isValid(id))
@@ -49,6 +57,7 @@ const deleteLesson = async (req, res) => {
 
 module.exports = {
   getLessons,
+  getLessonsBySubject,
   getLesson,
   postLesson,
   patchLesson,
