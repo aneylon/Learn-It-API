@@ -15,7 +15,7 @@ const lessonSchema = new Schema(
       type: Schema.Types.ObjectId,
       required: true,
     },
-    lessonId: {
+    cardSetId: {
       type: Schema.Types.ObjectId,
       required: true,
     },
