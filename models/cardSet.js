@@ -15,6 +15,12 @@ const cardSetSchema = new Schema(
       type: [String],
       required: true,
     },
+    cards: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "card",
+      },
+    ],
   },
   { timestamps: true }
 );
