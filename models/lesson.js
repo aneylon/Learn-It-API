@@ -12,7 +12,11 @@ const lessonSchema = new Schema(
       required: true,
     },
     subjectId: {
-      type: String,
+      type: Schema.Types.ObjectId,
+      required: true,
+    },
+    cardSetId: {
+      type: Schema.Types.ObjectId,
       required: true,
     },
   },

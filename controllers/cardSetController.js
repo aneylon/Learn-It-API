@@ -10,7 +10,7 @@ const getCardSet = async (req, res) => {
   const { id } = req.params;
   if (!mongoose.Types.ObjectId.isValid(id))
     return res.status(400).json({ error: `Not a valid Id : ${id}` });
-  const cardSet = await CardSet.findById(id);
+  const cardSet = await CardSet.findById(id).populate("cards");
   if (!cardSet)
     return res.status(400).json({ error: `No document for id : ${id}` });
   res.status(200).json({ cardSet });
