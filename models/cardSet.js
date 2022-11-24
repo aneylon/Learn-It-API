@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const Card = require("../models/card");
 const Schema = mongoose.Schema;
 
 const cardSetSchema = new Schema(
@@ -11,14 +12,10 @@ const cardSetSchema = new Schema(
       type: String,
       required: true,
     },
-    cards: {
-      type: [String],
-      required: true,
-    },
     cards: [
       {
         type: Schema.Types.ObjectId,
-        ref: "card",
+        ref: "Card",
       },
     ],
   },
