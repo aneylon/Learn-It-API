@@ -28,3 +28,11 @@ Running the command `npm run start:dev` will run the server locally with nodemon
 - Prettier - https://github.com/prettier/prettier-vscode
   - Prettier setup - ( ToDo )
 - Code Spell Checker - https://github.com/streetsidesoftware/vscode-spell-checker
+
+# ToDo
+
+- Add user routes
+- Profile Information
+- Change Password
+- Change Email
+- Change Admin flag
